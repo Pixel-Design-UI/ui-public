@@ -1,0 +1,40 @@
+
+.container {
+    max-width: 37.5rem;
+    margin:0 auto;
+    padding: 1.875rem;
+  }
+  
+  @media (max-width: 38.125rem) {
+    html body {
+        padding: 1.875rem !important;
+    }
+  
+    .all-content {
+        grid-template-columns: 1fr !important;
+    }
+  }
+  
+  .separator{
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .separator-3 {
+    margin-top: 0.3125rem;
+    margin-bottom: 0.3125rem;
+  }
+  
+  .separator-2 {
+    width: 100%;
+    height: 0.125rem;
+    background-color: #D8DDE5;
+    margin: 3.125rem 0rem 3.125rem 0rem;
+    border-radius: 0.625rem;
+  }
+  
+  .all-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
