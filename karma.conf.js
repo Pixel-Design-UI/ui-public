@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/pixel-ui-public'),
+      dir: require('path').join(__dirname, './coverage/brainsight-ui-public'),
       subdir: '.',
       reporters: [
         { type: 'html' },
