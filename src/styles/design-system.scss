@@ -3,9 +3,30 @@
 ----------------------------------------------------- */
 
 :root {
+  --dark: #0B0F31;
+  --dark-light: #252B60;
+  --dark-white: #ECEAF5;
+  --dark-grey: #B0B0C3;
 
+  --state-error: #F63A5C;
+  --state-error-hover: #AF263F;
+  --state-error-background: #F8D4D8;
+  --state-sucess: #277A52;
+  --state-sucess-hover: #0D3824;
+  --state-sucess-background: #D4F8DE;
+  --state-help: #17C7EB;
+  --state-help-hover: #1796AF;
+  --state-help-background: #D4F2F8;
+  --state-help-dark: #061A1E;
+  --state-problem: #FC9535;
+  --state-problem-hover: #BF732B;
+  --state-problem-background: #F8EAD4;
+
+  --primary: #E73355;
+  --primary-hover: #BB2D48;
+  --primary-background: #F8D4DA;
 }
-  
+
 /* ---------------------------------------------------
     TYPOGRAPHY
 ----------------------------------------------------- */
