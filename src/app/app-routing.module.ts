@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { DesignSystemComponent } from './design-system/design-system.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./interface/interface.module').then(m => m.InterfaceModule) }, 
-  { path: '', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  { path: 'charte', component: DesignSystemComponent }
+  //{ path: '', loadChildren: () => import('./interface/interface.module').then(m => m.InterfaceModule) }, 
+  //{ path: '', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: '', component: DesignSystemComponent }
 ];
 
 @NgModule({
