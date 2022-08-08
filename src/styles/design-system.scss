@@ -25,6 +25,7 @@
   --primary: #E73355;
   --primary-hover: #BB2D48;
   --primary-background: #F8D4DA;
+  --primary-disabled: #F399AA;
 
   --secondary: #38BDE2;
   --secondary-hover: #2A98B7;
@@ -51,17 +52,20 @@
   --border-default: 0.0625rem solid var(--gray);
   --border-active: 0.125rem solid var(--gray);
 
-  --radius-round: 100%;
+  --radius-round: 50px;
   --radius-small: 0.5rem;
 
   --shadow-default: 0.25rem 0.25rem 0.75rem rgba(31, 28, 28, 0.08);
   --shadow-active: 0.25rem 0.25rem 0.75rem rgba(31, 28, 28, 0.12);
+
+  --filter-primary: invert(35%) sepia(30%) saturate(3826%) hue-rotate(323deg) brightness(89%) contrast(104%);
+
+  --base-height: 3.25rem;
 }
 
 /* ---------------------------------------------------
     TYPOGRAPHY
 ----------------------------------------------------- */
-
 
 h1 {
   font-family: 'CircularStd';
@@ -121,7 +125,93 @@ h4 {
   font-family: 'CircularStd';
   font-style: normal;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 120%;
   color: var(--black);
 }
+
+/* ---------------------------------------------------
+    BUTTONS
+----------------------------------------------------- */
+
+.btn {
+  padding: 0 1.25rem;
+  transition: all 0.150s ease-in-out;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-round);
+  height: var(--base-height);
+  line-height: var(--base-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+
+  &:disabled {
+    background-color: var(--primary-disabled);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  border: 0.0625rem solid var(--primary);
+  color: var(--primary);
+
+  img {
+    filter: invert(44%) sepia(80%) saturate(6382%) hue-rotate(333deg) brightness(96%) contrast(89%); 
+  }
+
+  &:hover {
+    color: var(--primary-hover);
+    border-color: var(--primary-hover);
+  }
+
+  &:disabled {
+    color: var(--primary-disabled);
+    border-color: var(--primary-disabled);
+  }
+}
+
+.btn-icon-left img {
+  margin-right: 0.625rem;
+  height: 0.8125rem;
+}
+
+.btn-icon-right img {
+  margin-left: 0.625rem;
+  height: 0.8125rem;
+}
+
+.btn-fullwidth {
+  width: 100%;
+}
+
+.btn-slider {
+  display: flex;
+
+  .btn-slider-left {
+    border-radius: var(--radius-round) 0rem 0rem var(--radius-round);
+  }
+
+  .btn-slider-right {
+    border-radius: 0rem var(--radius-round) var(--radius-round) 0rem ;
+  }
+}
+
+.btn-slider-icons img {
+  margin: 0rem;
+}
+
+/* ---------------------------------------------------
+    INPUTS
+----------------------------------------------------- */
