@@ -1,4 +1,14 @@
 <div class="container">
+
+  <div style="display: flex; justify-content: space-between; width: 100%;">
+    <h4>Brainsight - Charte graphique</h4>
+
+    <button (click)="toggleDarkTheme()">Dark theme</button>
+    <button (click)="toggleWhiteTheme()">Light theme</button>
+  </div>
+
+  <div class="separator-2"></div>
+
   <!---- TYPOGRAPHY -------------------------------------------------->
 
   <h1>Titre primaire</h1>
@@ -49,7 +59,6 @@
         <img src="../../assets/icons/arrow-left.svg">
       </button>
       <button class="btn btn-primary btn-icon-right btn-slider-right">
-        
         <img src="../../assets/icons/arrow-right.svg">
       </button>
     </div>

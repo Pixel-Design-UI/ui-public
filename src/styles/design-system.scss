@@ -2,7 +2,7 @@
     COLORS
 ----------------------------------------------------- */
 
-:root {
+body {
   --dark: #0B0F31;
   --dark-light: #252B60;
   --dark-white: #ECEAF5;
@@ -61,6 +61,12 @@
   --filter-primary: invert(35%) sepia(30%) saturate(3826%) hue-rotate(323deg) brightness(89%) contrast(104%);
 
   --base-height: 3.25rem;
+}
+
+body.dark-theme {
+  --white: #0B0F31;
+  --black: #ECEAF5;
+  --gray: #B0B0C3;
 }
 
 /* ---------------------------------------------------
@@ -158,12 +164,13 @@ h4 {
   }
 
   &:disabled {
+    cursor: not-allowed;
     background-color: var(--primary-disabled);
   }
 }
 
 .btn-secondary {
-  background-color: var(--white);
+  background-color: transparent;
   border: 0.0625rem solid var(--primary);
   color: var(--primary);
 
@@ -177,6 +184,7 @@ h4 {
   }
 
   &:disabled {
+    cursor: not-allowed;
     color: var(--primary-disabled);
     border-color: var(--primary-disabled);
   }
@@ -215,3 +223,4 @@ h4 {
 /* ---------------------------------------------------
     INPUTS
 ----------------------------------------------------- */
+
