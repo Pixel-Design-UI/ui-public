@@ -31,17 +31,17 @@ body {
   --secondary-hover: #2A98B7;
   --secondary-background: #D0E7F3;
 
-  --white: #FFFFFF;
+  --white: #fafafafa;
 
   --black: #222222;
   --black-hover: #111111;
   --black-background: #E1E1E1;
 
   --gray-box-hover: #AFAFAF;
-  --gray-border: #D3D3D3;
+  --gray-border: #bebebe; //a edit sur design system
   --gray-border-light: #E0E0E0;
   --gray: #5C5C6C;
-  --gray-placeholder: #ADADAD;
+  --gray-placeholder: #6b6b6e; //a edit sur design system
   
   --spacing-40: 2.5rem;
   --spacing-32: 2rem;
@@ -50,7 +50,7 @@ body {
   --spacing-8: 0.5rem;
 
   --border-default: 0.0625rem solid var(--gray-border);
-  --border-active: 0.0625rem solid var(--black);
+  --border-active: 0.0625rem solid var(--gray);
 
   --radius-round: 50px;
   --radius-small: 0.5rem;
@@ -77,7 +77,6 @@ body.dark-theme {
 ----------------------------------------------------- */
 
 h1 {
-  font-family: 'CircularStd';
   font-style: normal;
   font-weight: 800;
   font-size: 2.5rem;
@@ -86,7 +85,6 @@ h1 {
 }
 
 h2 {
-  font-family: 'CircularStd';
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -95,7 +93,6 @@ h2 {
 }
 
 h3 {
-  font-family: 'CircularStd';
   font-style: normal;
   font-weight: 600;
   font-size: 1.5rem;
@@ -104,7 +101,6 @@ h3 {
 }
 
 h4 {
-  font-family: 'CircularStd';
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -113,7 +109,6 @@ h4 {
 }
 
 .paragraph-big {
-  font-family: 'CircularStd';
   font-style: normal;
   font-weight: 600;
   font-size: 1.125rem;
@@ -122,7 +117,6 @@ h4 {
 }
 
 .paragraph {
-  font-family: 'CircularStd';
   font-style: normal;
   font-weight: 500;
   font-size: 1rem;
@@ -131,7 +125,6 @@ h4 {
 }
 
 .paragraph-small {
-  font-family: 'CircularStd';
   font-style: normal;
   font-weight: 500;
   font-size: 0.8125rem;
@@ -213,6 +206,9 @@ h4 {
 
 .btn-slider {
   display: flex;
+  width: min-content;
+  flex-direction: row;
+  margin: 0rem;
 
   .btn-slider-left {
     border-radius: var(--radius-round) 0rem 0rem var(--radius-round);
@@ -259,21 +255,128 @@ input[type='text'], input[type='date'], input[type='email'], input[type='passwor
   }
 
   &::placeholder {
-    color: var(--gray);
+    color: var(--gray-placeholder);
   }
 
   &::-webkit-input-placeholder {
-    color: var(--gray);
+    color: var(--gray-placeholder);
     opacity: 1;
   }
 
   &::-moz-placeholder {
-    color: var(--gray);
+    color: var(--gray-placeholder);
     opacity: 1;
   }
 
   &:-moz-placeholder {
-    color: var(--gray);
+    color: var(--gray-placeholder);
     opacity: 1;
+  }
+}
+
+textarea {
+  height: auto !important;
+  resize: none;
+  padding: 0.9375rem;
+  border-radius: var(--radius-big);
+}
+
+
+/* ---------------------------------------------------
+    TAG
+----------------------------------------------------- */
+
+.tag {
+  text-transform: uppercase;
+  border-radius: var(--radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-small {
+  height: 24px;
+  font-size: 12px;
+  padding: 0px 9px;
+  font-weight: 600;
+
+  .tag-icon-right, .tag-icon-left {
+
+  }
+}
+
+.tag-medium {
+  height: 28px;
+  font-size: 12px;
+  padding: 0px 9px;
+  font-weight: 600;
+
+  .tag-icon-right, .tag-icon-left {
+    
+  }
+}
+
+.tag-big {
+  height: 36px;
+  font-size: 14px;
+  padding: 0px 12px;
+  font-weight: 700;
+
+  .tag-icon-right, .tag-icon-left {
+    
+  }
+}
+
+.tag-icon-left {
+
+}
+
+.tag-icon-right {
+
+}
+
+
+.tag-red {
+  background-color: var(--primary-background);
+  color: var(--primary);
+
+  .tag-icon-right, .tag-icon-left {
+    
+  }
+}
+
+.tag-green {
+  background-color: var(--state-sucess-background);
+  color: var(--state-sucess);
+
+  .tag-icon-right, .tag-icon-left {
+    
+  }
+}
+
+.tag-blue {
+  background-color: var(--secondary-background);
+  color: var(--secondary);
+
+  .tag-icon-right, .tag-icon-left {
+    
+  }
+}
+
+.tag-gray {
+  background-color: var(--black-background);
+  color: var(--black);
+
+  .tag-icon-right, .tag-icon-left {
+    
+  }
+}
+
+.tag-yellow {
+  background-color: var(--state-problem-background);
+  color: var(--state-problem);
+
+  .tag-icon-right, .tag-icon-left {
+    
   }
 }
